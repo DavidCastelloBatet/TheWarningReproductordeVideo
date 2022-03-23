@@ -36,6 +36,8 @@ section {
 .video video {
   margin: 20px;
   width: 70%;
+  height: 100%;
+  max-height: calc(100vh - 102px);
 }
 
 .botonera {
