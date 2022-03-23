@@ -24,13 +24,20 @@ function inicio() {
   console.log(ordenDeLosVideos);
 
   // mandamos el video seleccionado al src del html
-  vid.src = `videos/${videos[ordenDeLosVideos[0]]}`;
+  let indice = Math.floor(Math.random() * videos.length);
+  vid.src = `videos/${videos[ordenDeLosVideos[indice]]}`;
 
   // evento para el play / pause
   document.querySelector(".play").onclick = play;
 
   // evento para el mute
   document.querySelector(".mute").onclick = mute;
+
+  // evento para saltar cancion
+  document.querySelector(".siguiente").onclick = siguiente(indice);
+
+  // evento reiniciar cancion
+  document.querySelector(".reiniciar").onclick = reiniciar;
 }
 
 // funcion para el play / pause
@@ -44,8 +51,14 @@ let play = () => {
   }
 };
 
-//funcion para siguiente cancion
-// funcion reset cancion
+//funcion para siguiente cancion ** FALTA !!
+function siguiente(indice) {
+  console.log(indice);
+  console.log(ordenDeLosVideos.length);
+}
+
+// funcion reiniciar cancion
+let reiniciar = () => (vid.currentTime = 0);
 
 // Funciones relacionadas con el SONIDO (mute y control volumen)
 // funcion mute
