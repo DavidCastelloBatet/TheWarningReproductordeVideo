@@ -1,0 +1,73 @@
+body {
+  background-color: #c0bdbb;
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+section {
+  box-sizing: border-box;
+  display: grid;
+  /* 1 sola columna que tindra 3 files*/
+  grid-template-columns: 1fr;
+  /* la segona fila(barra d'estat) 7px la tercera(botonera)
+  30px. la primera (video), la resta*/
+  grid-template-rows: 1fr 7px 30px;
+  /* vindria a ser l'espai entre els elements */
+  grid-row-gap: 15px;
+  /* ocupara tot l'espai vertical de la finestra del navegador */
+  height: 100vh;
+  padding: 20px;
+}
+
+.video {
+  background-image: url("./images/warning1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.video video {
+  margin: 20px;
+  width: 70%;
+}
+
+.botonera {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+}
+
+.botonera img:hover {
+  background-color: #fff;
+  border-radius: 100px;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 90%;
+}
+
+.botoneraIzquierda {
+  display: grid;
+  /* farem 5 vegades 30px (1 x boto), 
+  Els 250px es l'espai reservat pel temps del video */
+  grid-template-columns: repeat(6, 30px) 250px;
+  grid-column-gap: 30px;
+  align-items: center;
+}
+
+.barra1 {
+  background-color: white;
+  height: 7px;
+  margin: 0 7px;
+}
+
+.barra2 {
+  background-color: crimson;
+  height: 100%;
+  width: 0%;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Reproductor de Video</title>
+  </head>
+
+  <body>
+    <section>
+      <!-- start video display -->
+      <div class="video">
+        <video src=""></video>
+      </div>
+      <!-- start video display -->
+
+      <!-- start progress bar -->
+      <div class="barraVideo">
+        <div class="barra1">
+          <div class="barra2"></div>
+        </div>
+      </div>
+      <!-- end progress bar -->
+
+      <!-- start button bar -->
+      <div class="botonera">
+        <div class="botoneraIzquierda">
+          <img
+            class="play"
+            src="./images/play.svg"
+            alt="play"
+            title="Play / Pausa"
+          />
+          <img
+            class="siguiente"
+            src="./images/siguiente.svg"
+            alt="siguiente"
+            title="Següent"
+          />
+          <img
+            class="reiniciar"
+            src="./images/reiniciar.svg"
+            alt="reiniciar"
+            title="Reiniciar video"
+          />
+          <img
+            class="mute"
+            src="./images/volumen1.svg"
+            alt="volumen"
+            title="mute"
+          />
+          <!-- slider control volum -->
+
+          <input
+            id="vol-control"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            oninput="setVolume(this.value)"
+            onchange="setVolume(this.value)"
+          />
+
+          <img
+            class="velocidad"
+            src="./images/velocidad.svg"
+            alt="velocidad"
+            title="Modificar velocitat"
+          />
+          <div class="estado"></div>
+        </div>
+        <div class="botoneraDerecha">
+          <img
+            class="reducir"
+            src="./images/reducir.svg"
+            alt="reducir"
+            title="Expandir / Reduir"
+          />
+        </div>
+      </div>
+      <!-- end button bar -->
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
