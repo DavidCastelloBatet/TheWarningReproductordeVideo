@@ -34,6 +34,9 @@ function inicio() {
   let indice = Math.floor(Math.random() * videos.length);
   vid.src = `videos/${videos[ordenDeLosVideos[indice]]}`;
 
+  // set volumen inicial a 0.5
+  vid.volume = 0.5;
+
   // evento para el play / pause
   document.querySelector(".play").onclick = play;
 
@@ -108,11 +111,16 @@ let mute = () => {
   } else {
     // si hay video en reproduccion hago el mute
     if (vid.volume > 0) {
+      // guardo vol actual avans mute
+      setVolumActual = vid.volume;
+      console.log(setVolumActual);
       vid.volume = 0;
       document.querySelector(".mute").src = "./images/volumen2.svg";
       console.log("esta en mute");
     } else {
-      vid.volume = 0.5;
+      // agafo vol guardat i actualitzo al treure
+      // el mute
+      vid.volume = setVolumActual;
       document.querySelector(".mute").src = "./images/volumen1.svg";
       console.log("ara sona");
       console.log("Nivell so: " + vid.volume);
