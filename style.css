@@ -22,6 +22,7 @@ section {
   /* ocupara tot l'espai vertical de la finestra del navegador */
   height: 100vh;
   padding: 20px;
+  transform: scale(0.6); /* podem controlar el tamany */
 }
 
 .video {
@@ -72,4 +73,8 @@ section {
   background-color: crimson;
   height: 100%;
   width: 0%;
+}
+
+.barraVideo:hover {
+  cursor: pointer;
 }
