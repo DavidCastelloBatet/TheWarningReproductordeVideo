@@ -14,11 +14,14 @@ console.log(videos);
 
 // Array vacio que se llenara al ejecutar reordenar()
 let ordenDeLosVideos = [];
-var speed = 2;
 
+// Variable  posicio inicial de l'array que controla velocitat de reproduccio
+var speed = 2; // 2 = normal
+
+// tot el quaryselector de l'etiqueta video el transformem en variable per escurçar
 var vid = document.querySelector("video");
 
-// funcion comodin para llamar funciones y disparar eventos
+// funcion  para llamar funciones y disparar eventos
 function inicio() {
   // LLamada a la funcion para reordenar videos
   reordenar();
@@ -123,8 +126,6 @@ window.setVolume = function (val) {
 //
 //
 
-// funcion velocidad de reproduccion ** FALTA
-
 // funcion expandir / contraer video
 let expandir = () => {
   let sect = document.querySelector("section");
@@ -186,7 +187,7 @@ let buscar = (e) => {
   // Este porcentaje lo convertiremos en segundos. Con flor, quitaremos
   // los decimales
   let posicion = Math.floor(vid.duration * (porcentaje / 100));
-  // Finalmente le diremos al video que vaya a la posicion resultante
+  // Finalmente le diremos al video que vaya a la posicion(en milisegundos) resultante
   vid.currentTime = posicion;
 };
 
