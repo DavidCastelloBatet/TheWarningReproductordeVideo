@@ -50,6 +50,9 @@ function inicio() {
 
   // acceso directo al hacer click en la barra de tiempo
   document.querySelector(".barra1").onclick = buscar;
+
+  // play / pause haciendo click sobre la imagen.
+  vid.onclick = play;
 }
 
 // Funciones control de la REPRODUCCION *******************
@@ -137,7 +140,7 @@ let actualizarTemps = () => {
   // mostramos tiempo y durada del video
   document.querySelector(".estado").innerHTML = `${conversion(
     vid.currentTime
-  )} / ${conversion(vid.duration)}`;
+  )}     /    ${conversion(vid.duration)}`;
   // actualizamos barra de progreso
   // regla de tres:
   // si 100% - vid.duration

@@ -54,6 +54,14 @@ section {
   width: 90%;
 }
 
+.estado {
+  color: rgb(12, 11, 12);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2.5;
+  margin-left: 100px;
+}
+
 .botoneraIzquierda {
   display: grid;
   /* farem 5 vegades 30px (1 x boto), 
