@@ -157,9 +157,17 @@ let actualizarTemps = () => {
   // Ahora, con el valor del porcentaje, modificamos el ancho de la
   // barra roja dinamicamente.
   document.querySelector(".barra2").style.width = `${porcentaje}%`;
+  //Compruebe si el video esta acabado y pongo la barra de progreso
+  // a 0 y cambio el icono para empezar a reproducir.
+  if (vid.currentTime == vid.duration) {
+    console.log("fin del video");
+    porcentaje = 0;
+    document.querySelector(".barra2").style.width = `${porcentaje}%`;
+    document.querySelector(".play").src = "./images/play.svg";
+  }
 };
 
-// per parametres pasem els milisegons de la data actual i la duració del video
+// per parametres rebem els milisegons de la data actual i la duració del video
 let conversion = (segundos) => {
   let progresoVideo = new Date(segundos * 1000);
   // si el numero de segons es menor que nou, concatenem un 0 per simular 2 digits
