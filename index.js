@@ -139,6 +139,8 @@ let expandir = () => {
     document.querySelector(".expandir").src = "./images/expandir.svg";
   }
 };
+//
+//
 
 // funciones que afectan a la BARRA DE PROGRESO
 let actualizarTemps = () => {

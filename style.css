@@ -36,7 +36,7 @@ section {
 
 .video video {
   margin: 20px;
-  width: 70%;
+  width: 90%;
   height: 100%;
   max-height: calc(100vh - 102px);
 }
@@ -51,7 +51,6 @@ section {
   border-radius: 100px;
   border: 1px solid black;
   cursor: pointer;
-  width: 90%;
 }
 
 .estado {
@@ -63,12 +62,26 @@ section {
 }
 
 .botoneraIzquierda {
-  display: grid;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
   /* farem 5 vegades 30px (1 x boto), 
   Els 250px es l'espai reservat pel temps del video */
-  grid-template-columns: repeat(6, 30px) 250px;
+  /* grid-template-columns: repeat(6, 30px) 250px;
   grid-column-gap: 30px;
-  align-items: center;
+  align-items: center; */
+}
+.botoneraIzquierda > * {
+  width: 30px;
+}
+
+.botoneraIzquierda #vol-control {
+  flex: 1;
+}
+
+.botoneraIzquierda .estado {
+  flex: 3;
 }
 
 .barra1 {
