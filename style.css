@@ -22,7 +22,6 @@ section {
   /* ocupara tot l'espai vertical de la finestra del navegador */
   height: 100vh;
   padding: 20px;
-  transform: scale(0.6); /* podem controlar el tamany */
 }
 
 .video {
@@ -38,7 +37,11 @@ section {
   margin: 20px;
   width: 90%;
   height: 100%;
-  max-height: calc(100vh - 102px);
+  max-height: calc(100vh - 140px);
+}
+
+.video video {
+  cursor: pointer;
 }
 
 .botonera {
@@ -49,8 +52,8 @@ section {
 .botonera img:hover {
   background-color: #fff;
   border-radius: 100px;
-  border: 1px solid black;
   cursor: pointer;
+  width: 30px;
 }
 
 .estado {
@@ -66,12 +69,8 @@ section {
   align-items: center;
   gap: 8px;
   justify-content: space-between;
-  /* farem 5 vegades 30px (1 x boto), 
-  Els 250px es l'espai reservat pel temps del video */
-  /* grid-template-columns: repeat(6, 30px) 250px;
-  grid-column-gap: 30px;
-  align-items: center; */
 }
+
 .botoneraIzquierda > * {
   width: 30px;
 }

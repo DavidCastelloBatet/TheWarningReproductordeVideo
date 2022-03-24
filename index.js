@@ -27,6 +27,9 @@ function inicio() {
   reordenar();
   console.log(ordenDeLosVideos);
 
+  // Poso l'escala del reproductor a 0.6
+  document.querySelector("section").style.transform = "scale(0.6)";
+
   // mandamos el video seleccionado al src del html
   let indice = Math.floor(Math.random() * videos.length);
   vid.src = `videos/${videos[ordenDeLosVideos[indice]]}`;
