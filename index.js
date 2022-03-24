@@ -14,6 +14,7 @@ console.log(videos);
 
 // Array vacio que se llenara al ejecutar reordenar()
 let ordenDeLosVideos = [];
+var speed = 2;
 
 var vid = document.querySelector("video");
 
@@ -53,6 +54,9 @@ function inicio() {
 
   // play / pause haciendo click sobre la imagen.
   vid.onclick = play;
+
+  // modificar velocidad de reproduccion
+  document.querySelector(".velocidad").onclick = velocidad;
 }
 
 // Funciones control de la REPRODUCCION *******************
@@ -184,4 +188,14 @@ let buscar = (e) => {
   let posicion = Math.floor(vid.duration * (porcentaje / 100));
   // Finalmente le diremos al video que vaya a la posicion resultante
   vid.currentTime = posicion;
+};
+
+// velocidad de reproduccio del video
+let velocidad = () => {
+  let velocidades = [0.2, 0.5, 1, 2, 4];
+  speed++;
+  if (speed >= velocidades.length) {
+    speed = 0;
+  }
+  vid.playbackRate = velocidades[speed];
 };
