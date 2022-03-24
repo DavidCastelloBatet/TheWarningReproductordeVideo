@@ -170,4 +170,15 @@ let conversion = (segundos) => {
 let buscar = (e) => {
   let dondeHeHechoClick = e.offsetX;
   console.log(dondeHeHechoClick);
+  //necesito saber el ancho de la barra enel navegador
+  let anchoNavegador = document.querySelector(".barra1").offsetWidth;
+  console.log(anchoNavegador);
+  //Ahora volveromos a calcular el porcentaje en referencia a la barra
+  let porcentaje = (100 * dondeHeHechoClick) / anchoNavegador;
+  console.log(porcentaje);
+  // Este porcentaje lo convertiremos en segundos. Con flor, quitaremos
+  // los decimales
+  let posicion = Math.floor(vid.duration * (porcentaje / 100));
+  // Finalmente le diremos al video que vaya a la posicion resultante
+  vid.currentTime = posicion;
 };
