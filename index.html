@@ -40,7 +40,6 @@
             alt="play"
             title="Play / Pausa"
           />
-
           <img
             class="siguiente"
             src="./images/siguiente.svg"
@@ -59,8 +58,7 @@
             alt="volumen"
             title="mute"
           />
-          <!-- slider control volum -->
-
+          <!-- start slider control volum -->
           <input
             id="vol-control"
             type="range"
@@ -70,7 +68,7 @@
             oninput="setVolume(this.value)"
             onchange="setVolume(this.value)"
           />
-
+          <!-- end slider control del volum -->
           <img
             class="velocidad"
             src="./images/velocidad.svg"
@@ -79,6 +77,7 @@
           />
           <div class="estado"></div>
         </div>
+        <!-- start boton expandir / contraer -->
         <div class="botoneraDerecha">
           <img
             class="expandir"
@@ -87,6 +86,7 @@
             title="Expandir / Reduir"
           />
         </div>
+        <!-- end boton expandir / contraer -->
       </div>
       <!-- end button bar -->
     </section>

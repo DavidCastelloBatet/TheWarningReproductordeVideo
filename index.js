@@ -114,6 +114,7 @@ let mute = () => {
       // guardo vol actual avans mute
       setVolumActual = vid.volume;
       console.log(setVolumActual);
+      // setejo vol a 0
       vid.volume = 0;
       document.querySelector(".mute").src = "./images/volumen2.svg";
       console.log("esta en mute");
@@ -177,7 +178,8 @@ let actualizarTemps = () => {
     document.querySelector(".play").src = "./images/play.svg";
   }
 };
-
+// amb aquesta funció transformo els milisegons que rebo per
+// parametres i retorno minuts i segons en format 00 : 00
 // per parametres rebem els milisegons de la data actual i la duració del video
 let conversion = (segundos) => {
   let progresoVideo = new Date(segundos * 1000);
