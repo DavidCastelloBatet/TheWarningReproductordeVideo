@@ -25,7 +25,7 @@ section {
 }
 
 .video {
-  background-image: url("./images/warning1.jpeg");
+  background-image: url("./images/concerttw.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,14 +34,12 @@ section {
 }
 
 .video video {
+  border-radius: 10px;
+  cursor: pointer;
   margin: 20px;
   width: 90%;
   height: 100%;
   max-height: calc(100vh - 140px);
-}
-
-.video video {
-  cursor: pointer;
 }
 
 .botonera {
@@ -97,4 +95,8 @@ section {
 
 .barraVideo:hover {
   cursor: pointer;
+}
+
+video[poster] {
+  border: 1px solid white;
 }
